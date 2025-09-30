@@ -1,0 +1,117 @@
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+.article-selection {
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.article-selection h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.article-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.article-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.article-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.article-card p {
+  font-size: 14px;
+  color: #666;
+  word-wrap: break-word;
+}
+
+.app-footer {
+  width: 100%;
+  padding: 20px 20px !important;
+  box-sizing: border-box;
+  left: 0;
+}
+
+.article-card .image-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.article-card .image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.article-card .image-container p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    padding: 0 10px;
+  }
+}
